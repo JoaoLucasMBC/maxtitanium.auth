@@ -17,4 +17,9 @@ public interface AuthController {
     ResponseEntity<LoginOut> authenticate (
         @RequestBody(required = true) CredentialIn in
     );
+
+    @PostMapping("/auth/solve")
+    ResponseEntity<SolveOut> solve (
+        @RequestBody(required = true) SolveIn in
+    );
 }
